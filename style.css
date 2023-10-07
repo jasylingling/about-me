@@ -1,0 +1,24 @@
+/* === Font === */
+
+@font-face {
+    font-family: "Chivo";
+    src: url("./fonts/Chivo-VariableFont_wght.ttf");
+}
+
+/* === Small CSS Reset === */
+
+* {
+margin: 0;
+padding: 0;
+}
+
+*, *::after, *::before {
+box-sizing: border-box;
+}
+
+/* === Main Styles === */
+
+body {
+    font-family: "Chivo", Verdana, Geneva, Tahoma, sans-serif;
+}
+
