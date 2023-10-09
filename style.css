@@ -151,8 +151,22 @@ main {
 
 /* === Responsive Styles === */
 
-/* LARGE DEVICES (laptops/desktops, 1240px and down) */
+/* EXTRA LARGE DEVICES (large laptops/desktops, 1420px and down) */
+@media only screen and (max-width: 1420px){
+    .no-love>h2, .no-love>ul {
+        padding-right: 3rem;
+    }
 
+    .love>h2, .love>ul {
+        padding-left: 3rem;
+    }
+
+    .love>ul {
+        margin: unset;
+    }
+}
+
+/* LARGE DEVICES (laptops/desktops, 1240px and down) */
 @media only screen and (max-width: 1240px) {
     .section-container {
         flex-direction: column;
