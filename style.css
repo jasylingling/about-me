@@ -1,3 +1,5 @@
+/* === Color Variables === */
+
 :root {
     --grey-accent: #F5F4F4;
     --dark-grey-secondary: #707070;
@@ -8,6 +10,21 @@
 @font-face {
     font-family: "Chivo";
     src: url("./fonts/Chivo-VariableFont_wght.ttf");
+}
+
+/* === Counter style at-rule for emojis as bullet points === */
+@counter-style love-emoji {
+    system: cyclic;
+    symbols: "\1F496";
+    /* unicode code point for heart */
+    suffix: " ";
+}
+
+@counter-style no-love-emoji {
+    system: cyclic;
+    symbols: "\274C";
+    /* unicode code point for no-heart */
+    suffix: " ";
 }
 
 /* === Small CSS Reset === */
@@ -63,7 +80,7 @@ main {
     min-height: 100vh;
     max-width: 100vw;
     overflow-x: hidden;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 .about-title {
@@ -102,17 +119,24 @@ main {
     letter-spacing: 0.03rem;
 }
 
-.love ul,
+/* .love ul,
 .no-love ul {
     list-style: none;
-}
+} */
 
 .love ul {
     margin-left: 10rem;
+    list-style: love-emoji;
 }
 
 .no-love ul {
     padding-left: 2rem;
+    list-style: no-love-emoji;
+}
+
+.love li,
+.no-love li {
+    padding-left: 0.125rem;
 }
 
 .love>h2,
@@ -136,13 +160,8 @@ main {
     padding-left: 2rem;
 }
 
-.love {
-    margin-right: 3rem;
-}
-
 .no-love {
     align-self: flex-end;
-    margin-left: 3rem;
 }
 
 /* Raining Emojis */
@@ -166,6 +185,7 @@ main {
 
 /* EXTRA LARGE DEVICES (large laptops/desktops, 1420px and down) */
 @media only screen and (max-width: 1420px) {
+
     .no-love>h2,
     .no-love>ul {
         padding-right: 3rem;
@@ -198,7 +218,6 @@ main {
     .no-love {
         margin-right: unset;
         margin-bottom: 3rem;
-        /* margin-left: unset; */
     }
 
     .no-love {
