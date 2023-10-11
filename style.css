@@ -13,19 +13,19 @@
 }
 
 /* === Counter style at-rule for emojis as bullet points === */
-@counter-style love-emoji {
+/* @counter-style love-emoji {
     system: cyclic;
-    symbols: "\1F496";
+    symbols: "\1F496"; */
     /* unicode code point for heart */
-    suffix: " ";
-}
+    /* suffix: " ";
+} */
 
-@counter-style no-love-emoji {
+/* @counter-style no-love-emoji {
     system: cyclic;
-    symbols: "\274C";
+    symbols: "\274C"; */
     /* unicode code point for no-heart */
-    suffix: " ";
-}
+    /* suffix: " ";
+} */
 
 /* === Small CSS Reset === */
 
@@ -119,25 +119,33 @@ main {
     letter-spacing: 0.03rem;
 }
 
-/* .love ul,
+.love ul,
 .no-love ul {
     list-style: none;
-} */
+}
 
 .love ul {
     margin-left: 10rem;
-    list-style: love-emoji;
+    /* list-style: love-emoji; */
 }
 
 .no-love ul {
     padding-left: 2rem;
-    list-style: no-love-emoji;
+    /* list-style: no-love-emoji; */
 }
 
-.love li,
+/* .love li,
 .no-love li {
     padding-left: 0.125rem;
-}
+} */
+
+.love li::before {
+    content: "💖 ";
+} 
+
+.no-love li::before {
+    content: "❌ ";
+} 
 
 .love>h2,
 .no-love>h2 {
@@ -222,6 +230,7 @@ main {
 
     .no-love {
         align-self: unset;
+        margin-left: 2rem;
     }
 
     .love>h2,
@@ -237,12 +246,6 @@ main {
 
     .no-love>h2 {
         padding-right: 2rem;
-    }
-
-
-    .love>ul,
-    .no-love>ul {
-        margin: unset;
     }
 
     .love>h2,

@@ -104,6 +104,9 @@ class Emoji {
             case '🥵':
                 emoji.innerText = '🥵'
                 break;
+            case '🦘':
+                emoji.innerText = '🦘'
+                break;
             default:
                 emoji.innerText = '🤷🏻‍♀️'
                 break;
