@@ -61,7 +61,7 @@ class Emoji {
         this.type = type
         this.clickId = clickId
         this.x = Math.floor(Math.random() * window.innerWidth)
-        this.y = Math.floor(Math.random() * ((-200) - (-2200) + 1) + (-2200))
+        this.y = Math.floor(Math.random() * 2001 -2200)
     }
 
     drawEmoji() {
@@ -70,47 +70,7 @@ class Emoji {
         emoji.classList.add(this.clickId)
         emoji.setAttribute('style', `left: ${this.x}px; top: ${this.y}px;`)
 
-        switch (this.type) {
-            case '🎵':
-                emoji.innerText = '🎵'
-                break;
-            case '☕️':
-                emoji.innerText = '☕️'
-                break;
-            case '🍿':
-                emoji.innerText = '🍿'
-                break;
-            case '🏝':
-                emoji.innerText = '🏝'
-                break;
-            case '🎹':
-                emoji.innerText = '🎹'
-                break;
-            case '🏂':
-                emoji.innerText = '🏂'
-                break;
-            case '👯‍♀️👨‍👩‍👧':
-                emoji.innerText = '👯‍♀️👨‍👩‍👧'
-                break;
-            case '🥒':
-                emoji.innerText = '🥒'
-                break;
-            case '😒':
-                emoji.innerText = '😒'
-                break;
-            case '🕷':
-                emoji.innerText = '🕷'
-                break;
-            case '🥵':
-                emoji.innerText = '🥵'
-                break;
-            case '🦘':
-                emoji.innerText = '🦘'
-                break;
-            default:
-                emoji.innerText = '🤷🏻‍♀️'
-                break;
-        }
+        emoji.innerText = ['🎵','☕️','🍿','🏝','🎹','🏂','👯‍♀️👨‍👩‍👧','🥒','😒','🕷','🥵','🦘'].contains(this.type) ? this.type : '🤷🏻‍♀️';
 
         document.body.appendChild(emoji)
     }
