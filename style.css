@@ -12,27 +12,11 @@
     src: url("./fonts/Chivo-VariableFont_wght.ttf");
 }
 
-/* === Counter style at-rule for emojis as bullet points === */
-/* @counter-style love-emoji {
-    system: cyclic;
-    symbols: "\1F496"; */
-    /* unicode code point for heart */
-    /* suffix: " ";
-} */
-
-/* @counter-style no-love-emoji {
-    system: cyclic;
-    symbols: "\274C"; */
-    /* unicode code point for no-heart */
-    /* suffix: " ";
-} */
-
 /* === Small CSS Reset === */
 
 * {
     margin: 0;
     padding: 0;
-    /* border: 1px solid red; */
 }
 
 *,
@@ -126,18 +110,11 @@ main {
 
 .love ul {
     margin-left: 10rem;
-    /* list-style: love-emoji; */
 }
 
 .no-love ul {
     padding-left: 2rem;
-    /* list-style: no-love-emoji; */
 }
-
-/* .love li,
-.no-love li {
-    padding-left: 0.125rem;
-} */
 
 .love li::before {
     content: "💖 ";
@@ -271,13 +248,9 @@ main {
         left: 100%;
     }
 
-    /* MEDIUM DEVICES (tablets, 992px and down) */
-
     /* SMALL DEVICES (landscape phones, 768px and down) */
     .img-container {
         width: 20rem;
         height: 20rem;
     }
-
-    /* EXTRA SMALL DEVICES (portrait phones, 576px and down) */
 }

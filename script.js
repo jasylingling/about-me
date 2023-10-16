@@ -1,39 +1,3 @@
-/* === EXAMPLE WITH 1 EMOJI === */
-
-// let cucumbers = [];
-// document.querySelectorAll(".let-rain").forEach(li=>{
-//     li.addEventListener("click", e=> {
-//         for (let i = 0; i < 100; i++) {
-//             cucumbers.push(new Cucumber());
-//             cucumbers[i].drawCucumber();
-//         }
-//         // after 5s remove cucumber-divs
-//         setTimeout(() => {
-//             document.querySelectorAll(".cucumber").forEach(cucumber=>{
-//                 cucumber.remove();
-//             })
-//         }, 5000);
-//     })
-// })
-
-// // blueprint for cucumbers
-// class Cucumber {
-//     constructor() {
-//         // value between 0 and window-width
-//         this.x = Math.floor(Math.random() * window.innerWidth);
-//         // value between -16 (starting point) and -316 (max)
-//         this.y = Math.floor(Math.random() * ((-16) - (-316) + 1)) + (-316);
-//     }
-
-//     drawCucumber() {
-//         let cucumber = document.createElement("div");
-//         cucumber.innerText = "🥒";
-//         cucumber.classList.add("cucumber");
-//         cucumber.setAttribute("style", `left: ${this.x}px; top: ${this.y}px;`);
-//         document.body.appendChild(cucumber);
-//     }
-// }
-
 let emojis = []
 document.querySelectorAll('.let-rain').forEach(li => {
     li.addEventListener('click', function () {
@@ -47,10 +11,8 @@ document.querySelectorAll('.let-rain').forEach(li => {
         }
         emojis = []
         setTimeout(() => {
-            // console.log(document.querySelectorAll(`.${clickId}`))
             document.querySelectorAll(`.${clickId}`).forEach(e => {
                 e.remove()
-                // emojis = []
             })
         }, 8000);
     })
