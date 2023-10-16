@@ -70,7 +70,7 @@ class Emoji {
         emoji.classList.add(this.clickId)
         emoji.setAttribute('style', `left: ${this.x}px; top: ${this.y}px;`)
 
-        emoji.innerText = ['🎵','☕️','🍿','🏝','🎹','🏂','👯‍♀️👨‍👩‍👧','🥒','😒','🕷','🥵','🦘'].contains(this.type) ? this.type : '🤷🏻‍♀️';
+        emoji.innerText = ['🎵','☕️','🍿','🏝','🎹','🏂','👯‍♀️👨‍👩‍👧','🥒','😒','🕷','🥵','🦘'].includes(this.type) ? this.type : '🤷🏻‍♀️';
 
         document.body.appendChild(emoji)
     }
